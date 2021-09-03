@@ -1,9 +1,9 @@
-# Hack-O-Uplift #
-# sahayi
+# Hack-O-Uplift 
+# ✨Sahayi✨
 
 A new Flutter project.
 
-## Getting Started
+## 👨🏽‍💻Getting Started
 
 This project is a starting point for a Flutter application.
 
