@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sahayi/screens/view_request.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -68,6 +69,14 @@ class _Singlr_cart_productState extends State<Singlr_cart_product> {
         leading:
             new Image.asset(widget.cart_prod_picture, width: 80, height: 80),
         title: new Text(widget.cart_prod_name),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ViewRequ(),
+            ),
+          );
+        },
       ),
     );
   }
