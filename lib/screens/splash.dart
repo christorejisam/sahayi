@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sahayi/screens/view_request.dart';
 import 'package:sahayi/screens/welcome.dart';
 
-import 'login.dart';
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();

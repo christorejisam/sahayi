@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sahayi/screens/home/home_page.dart';
-import 'package:sahayi/screens/login.dart';
-import 'package:sahayi/screens/signup.dart';
-import 'package:sahayi/screens/view_request.dart';
+
 import 'package:sawo/sawo.dart';
 
 Sawo sawo = Sawo(
@@ -20,7 +18,7 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   String user = "";
 
-  void payloadCallback(context, payload) {
+  Future<void> payloadCallback(context, payload) async {
     if (payload == null || (payload is String && payload.length == 0)) {
       payload = "Login Failed :(";
     } else {

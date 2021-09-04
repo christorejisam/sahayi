@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:sahayi/screens/add_req.dart';
 import 'package:sahayi/screens/search.dart';
@@ -28,6 +29,63 @@ class ViewRequ extends StatelessWidget {
             );
           },
           child: const Icon(Icons.add),
-        ));
+        ),
+        body: StreamBuilder(
+            stream:
+                FirebaseFirestore.instance.collection('medicine').snapshots(),
+            builder:
+                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (!snapshot.hasData) {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+
+              return ListView(
+                children: snapshot.data!.docs.map((document) {
+                  return Card(
+                      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            Text(
+                              document['item'],
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                            SizedBox(height: 6.0),
+                            Text(
+                              document['desc'],
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.grey[800],
+                              ),
+                            ),
+                            SizedBox(height: 6.0),
+                            Text(
+                              document['name'],
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.grey[800],
+                              ),
+                            ),
+                            SizedBox(height: 6.0),
+                            Text(
+                              document['phone'],
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.grey[800],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ));
+                }).toList(),
+              );
+            }));
   }
 }
