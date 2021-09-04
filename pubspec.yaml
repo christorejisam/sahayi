@@ -35,10 +35,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   sawo: ^0.1.2
   
-
   firebase_core: "^0.5.0"
   cloud_firestore: ^0.14.1
-
 
 dev_dependencies:
   flutter_test:

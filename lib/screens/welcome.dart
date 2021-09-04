@@ -72,12 +72,12 @@ class _WelcomeState extends State<Welcome> {
                         child: Text(
                           "Login with Email",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 20),
                         ),
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue[100],
+                            primary: Colors.indigo[200],
                             fixedSize: Size(80, 60),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50))),
@@ -92,14 +92,14 @@ class _WelcomeState extends State<Welcome> {
                           );
                         },
                         child: Text(
-                          "Login with phone no",
+                          "Login with Phone number",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 20),
                         ),
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue[100],
+                            primary: Colors.indigo[200],
                             fixedSize: Size(80, 60),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50))),

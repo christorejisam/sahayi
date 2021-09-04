@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.indigo[200],
         leading: IconButton(
           icon: Icon(Icons.person),
           onPressed: () {
@@ -77,24 +78,35 @@ class _Singlr_cart_productState extends State<Singlr_cart_product> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: ListTile(
-        leading:
-            new Image.asset(widget.cart_prod_picture, width: 80, height: 80),
-        title: new Text(
-          widget.cart_prod_name,
-          style: TextStyle(
-              color: Colors.indigo[900],
-              fontWeight: FontWeight.bold,
-              fontSize: 30),
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ViewRequ(),
+      margin: const EdgeInsets.fromLTRB(20.0, 16.0, 16.0, 0),
+      elevation: 20,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: SizedBox(
+        height: 150,
+        width: 300,
+        child: Center(
+          child: ListTile(
+            leading: new Image.asset(widget.cart_prod_picture,
+                width: 80, height: 80),
+            title: new Text(
+              widget.cart_prod_name,
+              style: TextStyle(
+                  color: Colors.indigo[900],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30),
             ),
-          );
-        },
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ViewRequ(),
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }

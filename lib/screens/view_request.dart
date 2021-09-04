@@ -12,7 +12,8 @@ class ViewRequ extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           //backgroundColor: Colors.white,
-          title: Center(child: Text("Help me out!!")),
+          backgroundColor: Colors.indigo[200],
+          title: Center(child: Text("Requests")),
           actions: [
             IconButton(
                 onPressed: () {
@@ -22,6 +23,7 @@ class ViewRequ extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.indigo[200],
           onPressed: () {
             Navigator.push(
               context,

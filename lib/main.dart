@@ -6,6 +6,7 @@ import 'package:sahayi/screens/splash.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.indigo[200]),
     );
   }
 }

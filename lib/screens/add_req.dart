@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class AddReq extends StatefulWidget {
@@ -112,6 +113,9 @@ class _AddReqState extends State<AddReq> {
                   ),
                 ),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.indigo[200],
+                    ),
                     onPressed: () {
                       FirebaseFirestore.instance.collection('medicine').add({
                         'name': _name,
