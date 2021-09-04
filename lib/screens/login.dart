@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sahayi/screens/home/home_page.dart';
 import 'package:sahayi/screens/signup.dart';
 import 'package:sahayi/screens/view_request.dart';
 
@@ -68,7 +69,7 @@ class _LoginState extends State<Login> {
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ViewRequ()));
+                        MaterialPageRoute(builder: (context) => HomePage()));
                   },
                   child: Text("Login")),
               SizedBox(
