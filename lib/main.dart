@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:sahayi/pages/home_page.dart';
+
+import 'package:sahayi/screens/splash.dart';
+
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: "Ubuntu",
-      ),
-      home: HomePage(),
+
+      
     );
   }
 }
