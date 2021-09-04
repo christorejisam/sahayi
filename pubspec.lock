@@ -8,7 +8,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
 
+
     version: "2.6.1"
+
 
   boolean_selector:
     dependency: transitive
@@ -151,7 +153,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
 
+
     version: "0.3.0"
+
 
   typed_data:
     dependency: transitive

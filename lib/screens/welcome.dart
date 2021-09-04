@@ -37,7 +37,7 @@ class _WelcomeState extends State<Welcome> {
                                 color: Colors.blue[200],
                                 alignment: Alignment.center,
                                 child:
-                                    Image.asset("assets/images/sahayi.png"))),
+                                    Image.asset("assets/images/SA1.jpg"))),
                       ),
                       SizedBox(height: 50),
                       Text('Sahayi',
