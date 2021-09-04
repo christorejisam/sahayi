@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sahayi/screens/view_request.dart';
+import 'package:sahayi/screens/welcome.dart';
 
+import 'login.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,14 +12,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    var d = Duration(seconds: 7);
+    var d = Duration(seconds: 6);
 
     Future.delayed(d, () {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
           builder: (context) {
-            return ViewRequ();
+            return Welcome();
           },
         ),
         (route) => false,
@@ -34,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/SAHAYI.jpg"),
+              image: AssetImage("assets/images/SAHAYI.gif"),
               //run this pls
 
               fit: BoxFit.cover,
