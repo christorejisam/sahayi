@@ -36,8 +36,8 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 Positioned.fill(
                   child: Opacity(
-                    opacity: 0.3,
-                    child: Image.asset('assets/images/hand.jpg',
+                    opacity: 0.5,
+                    child: Image.asset('assets/images/welcome.jpg',
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -55,18 +55,18 @@ class _WelcomeState extends State<Welcome> {
                                 alignment: Alignment.center,
                                 child: Image.asset("assets/images/SA1.jpg"))),
                       ),
-                      SizedBox(height: 50),
-                      Text('Sahayi',
+                      SizedBox(height: 30),
+                      Text('SAHAYI',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 40,
+                              fontSize: 60,
                               fontWeight: FontWeight.bold)),
                       SizedBox(height: 40),
-                      Text('Why not lend a helping hand today',
+                      Text('Why not lend a helping hand today ?',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white, fontSize: 18)),
-                      SizedBox(height: 40),
+                          style: TextStyle(color: Colors.black, fontSize: 20)),
+                      SizedBox(height: 350),
                       ElevatedButton(
                         onPressed: () {
                           sawo.signIn(
@@ -78,17 +78,17 @@ class _WelcomeState extends State<Welcome> {
                         child: Text(
                           "LOGIN with Email",
                           style: TextStyle(
-                              color: Colors.indigo[900],
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 20),
                         ),
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue[200],
-                            fixedSize: Size(90, 70),
+                            primary: Colors.blue[100],
+                            fixedSize: Size(80, 60),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50))),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: () {
                           sawo.signIn(
@@ -100,13 +100,13 @@ class _WelcomeState extends State<Welcome> {
                         child: Text(
                           "Login with phone no.",
                           style: TextStyle(
-                              color: Colors.indigo[900],
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 20),
                         ),
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue[200],
-                            fixedSize: Size(90, 70),
+                            primary: Colors.blue[100],
+                            fixedSize: Size(80, 60),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50))),
                       ),
