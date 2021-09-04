@@ -19,8 +19,8 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 Positioned.fill(
                   child: Opacity(
-                    opacity: 0.3,
-                    child: Image.asset('assets/images/hand.jpg',
+                    opacity: 0.5,
+                    child: Image.asset('assets/images/welcome.jpg',
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -29,16 +29,7 @@ class _WelcomeState extends State<Welcome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Center(
-                        child: ClipOval(
-                            child: Container(
-                                width: 180,
-                                height: 180,
-                                color: Colors.blue[200],
-                                alignment: Alignment.center,
-                                child:
-                                    Image.asset("assets/images/SA1.jpg"))),
-                      ),
+                      
                       SizedBox(height: 50),
                       Text('Sahayi',
                           textAlign: TextAlign.center,
