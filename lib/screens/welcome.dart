@@ -42,7 +42,7 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 Positioned.fill(
                   child: Opacity(
-                    opacity: 0.5,
+                    opacity: 0.9,
                     child: Image.asset('assets/images/welcome.jpg',
                         fit: BoxFit.cover),
                   ),
@@ -59,10 +59,10 @@ class _WelcomeState extends State<Welcome> {
                               fontSize: 40,
                               fontWeight: FontWeight.bold)),
                       SizedBox(height: 20),
-                      Text('Why not lend a helping hand today ?',
+                      Text('Why not lend a helping hand today !',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.black, fontSize: 20)),
-                      SizedBox(height: 180),
+                      SizedBox(height: 260),
                       ElevatedButton(
                         onPressed: () {
                           sawo.signIn(
@@ -72,7 +72,7 @@ class _WelcomeState extends State<Welcome> {
                           );
                         },
                         child: Text(
-                          "LOGIN with Email",
+                          "Login with Email",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ class _WelcomeState extends State<Welcome> {
                           );
                         },
                         child: Text(
-                          "Login with phone no.",
+                          "Login with phone no",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
