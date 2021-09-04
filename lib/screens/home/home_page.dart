@@ -9,28 +9,24 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var Product_on_the_cart = [
     {
-      "name": "Sanitizer",
-      "picture": "",
+      "name": "book",
+      "picture": "assets/images/boo.jpg",
     },
     {
-      "name": "Mask",
-      "picture": "",
-    },
-    {
-      "name": "PPt kit",
-      "picture": "",
+      "name": "Blood",
+      "picture": "assets/images/bb.jpg",
     },
     {
       "name": "Food",
-      "picture": "",
-    },
-    {
-      "name": "Plasma",
-      "picture": "",
+      "picture": "assets/images/f.jpg",
     },
     {
       "name": "Medicine",
-      "picture": "",
+      "picture": "assets/images/1.jpg",
+    },
+    {
+      "name": "Others",
+      "picture": "assets/images/o.jpg",
     },
   ];
   @override
@@ -68,7 +64,13 @@ class _Singlr_cart_productState extends State<Singlr_cart_product> {
       child: ListTile(
         leading:
             new Image.asset(widget.cart_prod_picture, width: 80, height: 80),
-        title: new Text(widget.cart_prod_name),
+        title: new Text(
+          widget.cart_prod_name,
+          style: TextStyle(
+              color: Colors.indigo[900],
+              fontWeight: FontWeight.bold,
+              fontSize: 30),
+        ),
         onTap: () {
           Navigator.push(
             context,
