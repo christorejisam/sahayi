@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sahayi/screens/home/home_page.dart';
 import 'package:sahayi/screens/login.dart';
 import 'package:sahayi/screens/signup.dart';
+import 'package:sahayi/screens/view_request.dart';
 import 'package:sawo/sawo.dart';
 
 Sawo sawo = Sawo(
@@ -21,10 +23,14 @@ class _WelcomeState extends State<Welcome> {
   void payloadCallback(context, payload) {
     if (payload == null || (payload is String && payload.length == 0)) {
       payload = "Login Failed :(";
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ),
+      );
     }
-    setState(() {
-      user = payload;
-    });
   }
 
   @override
@@ -46,27 +52,17 @@ class _WelcomeState extends State<Welcome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Center(
-                        child: ClipOval(
-                            child: Container(
-                                width: 180,
-                                height: 180,
-                                color: Colors.blue[200],
-                                alignment: Alignment.center,
-                                child: Image.asset("assets/images/SA1.jpg"))),
-                      ),
-                      SizedBox(height: 30),
                       Text('SAHAYI',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 60,
+                              fontSize: 40,
                               fontWeight: FontWeight.bold)),
-                      SizedBox(height: 40),
+                      SizedBox(height: 20),
                       Text('Why not lend a helping hand today ?',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.black, fontSize: 20)),
-                      SizedBox(height: 350),
+                      SizedBox(height: 180),
                       ElevatedButton(
                         onPressed: () {
                           sawo.signIn(
