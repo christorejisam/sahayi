@@ -7,6 +7,11 @@
 ## Objective:
         Helping to find requirements in easier way
 
+
+## 📷 Interface of the application :
+
+![Preview](/photo.jpg)
+
 ## What Sahayi does🤔
 - Makes easier to find what you need
 - Helps you to donate
