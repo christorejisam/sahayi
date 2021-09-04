@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sahayi/screens/login.dart';
 import 'package:sahayi/screens/signup.dart';
+import 'package:sawo/sawo.dart';
+
+Sawo sawo = Sawo(
+  apiKey: "686a43b7-138f-446b-bf5b-0ad14b9f3ebf",
+  secretKey: "*********",
+);
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -10,6 +16,17 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  String user = "";
+
+  void payloadCallback(context, payload) {
+    if (payload == null || (payload is String && payload.length == 0)) {
+      payload = "Login Failed :(";
+    }
+    setState(() {
+      user = payload;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +53,7 @@ class _WelcomeState extends State<Welcome> {
                                 height: 180,
                                 color: Colors.blue[200],
                                 alignment: Alignment.center,
-                                child:
-                                    Image.asset("assets/images/SA1.jpg"))),
+                                child: Image.asset("assets/images/SA1.jpg"))),
                       ),
                       SizedBox(height: 50),
                       Text('Sahayi',
@@ -53,11 +69,14 @@ class _WelcomeState extends State<Welcome> {
                       SizedBox(height: 40),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Login()));
+                          sawo.signIn(
+                            context: context,
+                            identifierType: 'email',
+                            callback: payloadCallback,
+                          );
                         },
                         child: Text(
-                          "LOGIN",
+                          "LOGIN with Email",
                           style: TextStyle(
                               color: Colors.indigo[900],
                               fontWeight: FontWeight.bold,
@@ -72,13 +91,14 @@ class _WelcomeState extends State<Welcome> {
                       SizedBox(height: 10),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Signup()));
+                          sawo.signIn(
+                            context: context,
+                            identifierType: 'phone_number_sms',
+                            callback: payloadCallback,
+                          );
                         },
                         child: Text(
-                          "SIGN UP",
+                          "Login with phone no.",
                           style: TextStyle(
                               color: Colors.indigo[900],
                               fontWeight: FontWeight.bold,
